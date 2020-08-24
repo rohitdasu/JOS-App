@@ -1,0 +1,26 @@
+.pf {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  border-radius: 15rem;
+  height: 130px;
+  width: 130px;
+}
+.pn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 310%);
+  font-weight: 100;
+}
+.pencil {
+  position: absolute;
+  left: 50%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 2px solid yellow;
+  background-color: white;
+}
+.button{
+  --border-radius:60px;
+}

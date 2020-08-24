@@ -1,0 +1,30 @@
+<ion-content fullscreen scroll-y="false">
+  <ion-slides pager="true">
+    <ion-slide>
+      <div>
+        <img class="slider" src="./../../../assets/slides/slider.png" />
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <img class="slider" src="./../../../assets/slides/slider.png" />
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div>
+        <img class="slider" src="./../../../assets/slides/slider.png" />
+      </div>
+
+      <ion-button
+        (click)="gotoApp()"
+        size="large"
+        color="light"
+        fill="outline"
+        class="button"
+        style="position: absolute;"
+        >Continue <ion-icon name="arrow-forward"></ion-icon
+      ></ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

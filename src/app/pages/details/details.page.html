@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <img src="../../assets/page1.png" alt="" />
+    <ion-back-button
+      style="position: absolute; top: 0; padding: 5%;"
+      color="light"
+      mode="md"
+      defaultHref="/"
+    ></ion-back-button>
+  </div>
+  <div class="ion-activatable">
+    <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+    <img src="../../assets/donate-now.png" (click)="null" class="img" alt="" />
+  </div>
+  <div class="text">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five cen
+    </p>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ey of type and
+      scrambled it to make a type specimen book. It has survived not only five
+      cen
+    </p>
+    <ion-button (click)="gotoPlan()" color="dark" class="button"
+      >Select Plan</ion-button
+    >
+  </div>
+</ion-content>

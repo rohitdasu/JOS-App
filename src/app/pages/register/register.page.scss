@@ -1,0 +1,40 @@
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  height: 100px;
+  width: 100px;
+}
+.form {
+  margin-top: 35%;
+  width: 100%;
+  height: 20%;
+}
+
+.low {
+  margin-top: 66%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.lower {
+  height: 100px;
+  background-color: black;
+  width: 100%;
+}
+
+.button {
+  margin-top: 5%;
+  margin-left: 32%;
+}
+
+ion-item {
+  padding-left: 10%;
+  padding-right: 10%;
+  --background: #ffc409;
+}
+
+ion-content {
+  position: relative;
+  --background: #ffc409;
+}

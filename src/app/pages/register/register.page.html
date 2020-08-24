@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="logo">
+    <img src="../../../assets/logo.png" alt="" />
+  </div>
+
+  <div class="form">
+    <div style="font-weight: bold;font-size: large;text-align: center;">REGISTER</div>
+    <ion-item lines="none">
+      <ion-label>NAME</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+    />
+    <ion-item lines="none">
+      <ion-label>EMAIL</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+    />
+    <ion-item lines="none">
+      <ion-label>PHONE</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+    />
+    <ion-item lines="none">
+      <ion-label>USERNAME</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+    />
+    <ion-item lines="none">
+      <ion-label>PASSWORD</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+    />
+  </div>
+
+
+  <div class="low">
+    <ion-row>
+      <ion-col size="1"><ion-checkbox mode="md"></ion-checkbox></ion-col>
+      <ion-col size="11">I'am agree with your terms & condition</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <span (click)="gotoLogin()">ALREADY HAVE AN ACCOUNT? LOGIN</span>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="lower">
+    <ion-button fill="clear" class="button"
+      >SIGN UP<ion-icon name="arrow-forward-outline"></ion-icon
+    ></ion-button>
+  </div>
+</ion-content>

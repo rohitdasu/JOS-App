@@ -1,0 +1,141 @@
+<ion-content [fullscreen]="true" mode="ios">
+  <ion-toolbar>
+    <!-- <ion-button slot="start" mode="md" fill="clear" color="light">
+      <ion-icon name="arrow-back-outline" size="large"></ion-icon>
+    </ion-button> -->
+    <ion-button fill="clear" slot="end" color="light">
+      <ion-icon size="large" name="menu-outline"> </ion-icon>
+    </ion-button>
+  </ion-toolbar>
+
+  <ion-card mode="ios">
+    <p style="padding-left: 5%; padding-top: 5%;">per people price : 10rs</p>
+    <ion-card-content>
+      <h2 style="font-weight: bold;">How many people to donate food</h2>
+    </ion-card-content>
+    <ion-card-content style="margin-top: -30px;">
+      <ion-item lines="none">
+        <ion-label>Select number of persons</ion-label>
+        <ion-select value="5">
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+          <ion-select-option value="7">7</ion-select-option>
+          <ion-select-option value="8">8</ion-select-option>
+          <ion-select-option value="9">9</ion-select-option>
+          <ion-select-option value="10">10</ion-select-option>
+          <ion-select-option value="11">11</ion-select-option>
+          <ion-select-option value="12">12</ion-select-option>
+          <ion-select-option value="13">13</ion-select-option>
+          <ion-select-option value="14">14</ion-select-option>
+          <ion-select-option value="15">15</ion-select-option>
+          <ion-select-option value="16">16</ion-select-option>
+          <ion-select-option value="17">17</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <ion-item-divider></ion-item-divider>
+  <ion-item>
+    <ion-label style="font-weight: bolder;">Choose Date</ion-label>
+    <ion-icon name="calendar-outline"></ion-icon>
+    <ion-datetime displayFormat="MM DD YY" min="2020" max="2022">
+    </ion-datetime>
+  </ion-item>
+  <ion-item-divider></ion-item-divider>
+  <ion-item>
+    <ion-label style="font-weight: bold;">Food Type</ion-label>
+  </ion-item>
+
+  <ion-row style="padding: 5%;" mode="md">
+    <ion-col>
+      <ion-row>
+        <ion-col size="2"><ion-checkbox color="light"></ion-checkbox></ion-col>
+        <ion-col size="10"><ion-label>Solid</ion-label></ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row>
+        <ion-col size="2"><ion-checkbox color="light"></ion-checkbox></ion-col>
+        <ion-col size="10"><ion-label>Liquid</ion-label></ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="padding-left: 5%; margin-top: -30px;" mode="md">
+    <ion-col>
+      <ion-row mode="ios">
+        <ion-select value="1">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+          <ion-select-option value="7">7</ion-select-option>
+          <ion-select-option value="8">8</ion-select-option>
+          <ion-select-option value="9">9</ion-select-option>
+          <ion-select-option value="10">10</ion-select-option>
+        </ion-select>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row mode="ios">
+        <ion-select value="1">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+          <ion-select-option value="7">7</ion-select-option>
+          <ion-select-option value="8">8</ion-select-option>
+          <ion-select-option value="9">9</ion-select-option>
+          <ion-select-option value="10">10</ion-select-option>
+        </ion-select>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-item-divider></ion-item-divider>
+  <ion-row style="padding: 5%;">
+    <ion-col size="1">
+      <ion-checkbox color="light" mode="md"></ion-checkbox>
+    </ion-col>
+    <ion-col size="11">
+      <ion-label style="font-weight: 800;"
+        >I don't want to recieve whatsapp image</ion-label
+      >
+    </ion-col>
+  </ion-row>
+  <ion-item-divider></ion-item-divider>
+  <div style="padding: 5%; font-weight: 800;">
+    <ion-row>
+      <ion-col>Total People</ion-col>
+      <ion-col>Price per People</ion-col>
+      <ion-col>Your Total Price</ion-col>
+    </ion-row>
+    <ion-row size="5">
+      <ion-col>
+        <ion-row>
+          <ion-col>5</ion-col>
+          <ion-col>X</ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="5">10</ion-col>
+      <ion-col size="2">50</ion-col>
+    </ion-row>
+  </div>
+  <div>
+    <ion-button
+    (click)="gotoPayment()"
+      style="
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+      "
+      color="warning"
+      >Donate Now</ion-button
+    >
+  </div>
+</ion-content>

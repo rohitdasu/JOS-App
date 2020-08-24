@@ -1,17 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-row style="padding: 5%; font-size: x-large;">
+    About
+  </ion-row>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="openDialog('../../assets/tab2/9_.jpg')" class="ion-activatable" mode="ios">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img class="img1" src="../../assets/tab2/9_.jpg" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br />
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="openDialog('../../assets/tab2/2.jpg')" class="ion-activatable" mode="ios">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img class="img2" src="../../assets/tab2/2.jpg" alt="" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br>
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="openDialog('../../assets/tab2/6.jpg')" class="ion-activatable" mode="ios">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img class="img2" src="../../assets/tab2/6.jpg" alt="" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br>
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="openDialog('../../assets/tab2/9_.jpg')" class="ion-activatable" mode="ios">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img class="img1" src="../../assets/tab2/9_.jpg" alt="" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br />
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,0 +1,18 @@
+.img{
+    position: absolute;
+    left:50%;
+    transform: translate(-40%,-125%);
+    height: 100px;
+    width: 130px;
+}
+.text{
+    font-family: sans-serif;
+    margin-top: 15%;
+    position: relative;
+    padding:6%;
+}
+.button{
+    --border-radius: 50%;
+    float: right;
+    margin-top: -10px;
+}

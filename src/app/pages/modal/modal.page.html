@@ -1,0 +1,31 @@
+<ion-content mode="ios">
+  <div class="button">
+    <ion-button (click)="dismiss()" fill="clear" color="light">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+  </div>
+  <img class="img" src="{{img}}" />
+  <div class="text">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Lorem ipsum
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the
+        </p>
+        <a (click)="gotoDetails()" style="text-decoration: underline; color: black;"
+          >Click Here for Details</a
+        >
+
+        <ion-chip (click)="gotoCelebration()" color="light" style="margin-left: 10px;background-color: black;"
+          >Donate Now</ion-chip
+        >
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
