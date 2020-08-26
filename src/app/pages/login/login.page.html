@@ -12,15 +12,15 @@
   <div class="login">LOGIN</div>
   <div class="form">
     <ion-item lines="none">
-      <ion-label>USERNAME</ion-label>
-      <ion-input></ion-input>
+      <ion-label>EMAIL</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
     </ion-item>
     <hr
       style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
     />
     <ion-item lines="none">
       <ion-label>PASSWORD</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
     </ion-item>
     <hr
       style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
@@ -36,7 +36,7 @@
     </div>
   </div>
   <div class="lower">
-    <ion-button fill="clear" class="button" (click)="gotoProfile()"
+    <ion-button fill="clear" class="button" [disabled]="email==''||email==undefined||password==''||password==undefined" (click)="login()"
       >LOGIN<ion-icon name="arrow-forward-outline"></ion-icon
     ></ion-button>
   </div>

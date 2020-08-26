@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { StorageService } from "../shared/storage.service";
+import { User } from '../models/user';
 
 @Component({
   selector: "app-tab3",
@@ -7,6 +9,9 @@ import { Component, OnInit } from "@angular/core";
 })
 export class Tab3Page implements OnInit {
   x: boolean = true;
-  constructor() {}
-  ngOnInit() {}
+  user:User;
+  constructor(private storage: StorageService) {}
+  ngOnInit() {
+    this.user=this.storage.getUserData();
+  }
 }

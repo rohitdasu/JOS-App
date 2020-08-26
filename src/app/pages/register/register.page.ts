@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
   selector: 'app-register',
@@ -7,13 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-
-  constructor(private router:Router) { }
+  name:string;
+  email:string;
+  phone:string;
+  password:string;
+  confirm_password:string;
+  constructor(private router:Router,private api:ApiService) { }
 
   ngOnInit() {
   }
   gotoLogin(){
     this.router.navigate(['/login']);
   }
-
+  register(){
+    this.api.registerApi(this.name,this.email,this.phone,this.password,this.confirm_password).subscribe(val=>console.log(val));
+  }
 }

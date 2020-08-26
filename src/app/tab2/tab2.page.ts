@@ -6,7 +6,11 @@ import {
   MatDialogRef,
 } from "@angular/material/dialog";
 import { ModalController } from "@ionic/angular";
-import { ModalPage } from '../pages/modal/modal.page';
+import { ModalPage } from "../pages/modal/modal.page";
+
+import { IonRouterOutlet, Platform } from "@ionic/angular";
+import { Plugins } from "@capacitor/core";
+const { App } = Plugins;
 
 @Component({
   selector: "app-tab2",
@@ -17,15 +21,23 @@ export class Tab2Page {
   constructor(
     private router: Router,
     public dialog: MatDialog,
-    public modalController: ModalController
-  ) {}
+    public modalController: ModalController,
+    private routerOutlet: IonRouterOutlet,
+    private platform: Platform
+  ) {
+    this.platform.backButton.subscribeWithPriority(-1, () => {
+      if (!this.routerOutlet.canGoBack()) {
+        App.exitApp();
+      }
+    });
+  }
 
-  async openDialog(img:string) {
+  async openDialog(img: string) {
     const modal = await this.modalController.create({
       component: ModalPage,
       componentProps: {
-        'img': img,
-      }
+        img: img,
+      },
     });
     return await modal.present();
   }

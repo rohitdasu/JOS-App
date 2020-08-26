@@ -4,67 +4,67 @@
   </div>
   <div>
     <img class="pf" src="../../assets/avatar.jpg" />
-    <p class="pn">UserXYZ</p>
+    <p class="pn">{{user.name|uppercase}}</p>
     <ion-button fill="clear" color="light" class="pencil" (click)="x=!x">
-      <img src="../../assets/ic_launcher.png" alt="">
+      <img src="../../assets/ic_launcher.png" alt="" />
     </ion-button>
   </div>
 
-  <div style="margin-top: 30%; padding: 5%;">
+  <div style="margin-top: 30%; padding: 5%">
     <ion-input
       placeholder="email"
       [disabled]="x"
-      value="userxyz@yopmail.com"
+      value="{{user.email}}"
     ></ion-input>
-    <hr style="border: 0.1px solid orange;" />
+    <hr style="border: 0.1px solid orange" />
     <ion-input
       placeholder="phone"
       [disabled]="x"
-      value="1234567890"
+      value="{{user.phone}}"
     ></ion-input>
-    <hr style="border: 0.1px solid orange;" />
+    <hr style="border: 0.1px solid orange" />
     <ion-input
       placeholder="Address"
       [disabled]="x"
       value="Bhubaneswar"
     ></ion-input>
-    <hr style="border: 0.1px solid orange;" />
+    <hr style="border: 0.1px solid orange" />
     <ion-input
       type="password"
       [disabled]="x"
       value="xyzxyz"
       placeholder="Password"
     ></ion-input>
-    <hr style="border: 0.1px solid orange;" />
+    <hr style="border: 0.1px solid orange" />
     <br />
 
     <ion-button color="dark" class="button">My Subscription Plan</ion-button>
 
-    <div style="padding: 1%;">
+    <div style="padding: 1%">
       <ion-label>Monthly Subscription</ion-label>
-      <ion-label style="padding-left: 3%; font-size: small;" color="success"
+      <ion-label style="padding-left: 3%; font-size: small" color="success"
         >Expires on 20/08/2020</ion-label
       >
     </div>
-    <hr style="border: 0.1px solid;" />
+    <hr style="border: 0.1px solid" />
     <br />
     <ion-button color="dark" class="button">My Give Aways</ion-button>
 
-    <div style="padding: 1%;">
+    <div style="padding: 1%">
       <ion-label>Monthly Subscription</ion-label>
-      <ion-label style="padding-left: 3%; font-size: small;" color="danger"
+      <ion-label style="padding-left: 3%; font-size: small" color="danger"
         >Expired </ion-label
-      ><ion-label style="font-size: small;">20/08/2020</ion-label>
+      ><ion-label style="font-size: small">20/08/2020</ion-label>
       <br />
       <ion-label>Monthly Subscription</ion-label>
-      <ion-label style="padding-left: 3%; font-size: small;" color="danger"
+      <ion-label style="padding-left: 3%; font-size: small" color="danger"
         >Expired </ion-label
-      ><ion-label style="font-size: small;">20/08/2020</ion-label>
+      ><ion-label style="font-size: small">20/08/2020</ion-label>
       <br />
       <ion-label>Monthly Subscription</ion-label>
-      <ion-label style="padding-left: 3%; font-size: small;" color="danger"
+      <ion-label style="padding-left: 3%; font-size: small" color="danger"
         >Expired </ion-label
-      ><ion-label style="font-size: small;">20/08/2020</ion-label>
+      ><ion-label style="font-size: small">20/08/2020</ion-label>
     </div>
   </div>
 </ion-content>

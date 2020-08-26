@@ -1,5 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { ApiService } from "src/app/shared/api.service";
+import { AuthService } from "src/app/shared/auth.service";
+import { ToastController } from "@ionic/angular";
+import { StorageService } from "src/app/shared/storage.service";
 
 @Component({
   selector: "app-login",
@@ -7,13 +11,45 @@ import { Router } from "@angular/router";
   styleUrls: ["./login.page.scss"],
 })
 export class LoginPage implements OnInit {
-  constructor(private router: Router) {}
+  email: string;
+  password: string;
 
+  constructor(
+    private router: Router,
+    private api: ApiService,
+    private auth: AuthService,
+    public toastController: ToastController,
+    private storage: StorageService
+  ) {}
   ngOnInit() {}
   gotoRegister() {
     this.router.navigate(["/register"]);
   }
-  gotoProfile() {
-    this.router.navigate(["/tabs/tab3"]);
+  login() {
+    this.api.loginApi(this.email, this.password).subscribe((val) => {
+      if (val["status"] == "success") {
+        let id = val["user"].id;
+        let phone = val["user"].phone;
+        let email = val["user"].email;
+        let name = val["user"].name;
+        this.storage.setUserData(id, name, phone, email);
+        localStorage.setItem("access_token", val["access_token"]);
+        localStorage.setItem("user_name", val["user"].name);
+        this.auth.addAuth(true);
+        this.router.navigate(["/tabs/tab3"]);
+      } else if (val["status"] == "failure") {
+        this.presentToast("Username and Password Incorrect!");
+      } else {
+        this.presentToast("Something Went Wrong!");
+      }
+    });
+  }
+  async presentToast(msg: string) {
+    const toast = await this.toastController.create({
+      message: msg,
+      position: "middle",
+      duration: 2000,
+    });
+    toast.present();
   }
 }

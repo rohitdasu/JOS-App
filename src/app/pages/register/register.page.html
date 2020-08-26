@@ -4,44 +4,45 @@
   </div>
 
   <div class="form">
-    <div style="font-weight: bold;font-size: large;text-align: center;">REGISTER</div>
+    <div style="font-weight: bold; font-size: large; text-align: center">
+      REGISTER
+    </div>
     <ion-item lines="none">
       <ion-label>NAME</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="name"></ion-input>
     </ion-item>
     <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
     />
     <ion-item lines="none">
       <ion-label>EMAIL</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="email"></ion-input>
     </ion-item>
     <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
     />
     <ion-item lines="none">
       <ion-label>PHONE</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="phone"></ion-input>
     </ion-item>
     <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
-    />
-    <ion-item lines="none">
-      <ion-label>USERNAME</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
     />
     <ion-item lines="none">
       <ion-label>PASSWORD</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
     <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
+    />
+    <ion-item lines="none">
+      <ion-label>CONFIRM PASSWORD</ion-label>
+      <ion-input type="password" [(ngModel)]="confirm_password"></ion-input>
+    </ion-item>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
     />
   </div>
-
 
   <div class="low">
     <ion-row>
@@ -56,7 +57,7 @@
   </div>
 
   <div class="lower">
-    <ion-button fill="clear" class="button"
+    <ion-button fill="clear" class="button" (click)="register()"
       >SIGN UP<ion-icon name="arrow-forward-outline"></ion-icon
     ></ion-button>
   </div>
