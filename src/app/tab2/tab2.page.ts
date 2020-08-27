@@ -25,11 +25,11 @@ export class Tab2Page {
     private routerOutlet: IonRouterOutlet,
     private platform: Platform
   ) {
-    this.platform.backButton.subscribeWithPriority(-1, () => {
-      if (!this.routerOutlet.canGoBack()) {
-        App.exitApp();
-      }
-    });
+    // this.platform.backButton.subscribeWithPriority(-1, () => {
+    //   if (!this.routerOutlet.canGoBack()) {
+    //     App.exitApp();
+    //   }
+    // });
   }
 
   async openDialog(img: string) {

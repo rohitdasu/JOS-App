@@ -1,49 +1,19 @@
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  height: 100px;
-  width: 100px;
-}
-
-.login {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 1000%);
+.login-text {
+  margin: 0 auto;
   font-size: x-large;
-  font-weight: 500;
   font-family: "Times New Roman";
+  margin-top: 35%;
 }
-.form {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 270%);
-  width: 100%;
-  margin-top: -19%;
+ion-content {
+  --background: #ffc409;
 }
 ion-item {
   padding-left: 10%;
   padding-right: 10%;
   --background: #ffc409;
 }
-ion-content {
-  --background: #ffc409;
-}
-.low {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 750%);
-  margin-top: -19%;
-}
-.lower {
-  background-color: black;
-  position: absolute;
-  height: 100px;
-  width: 100vh;
-  bottom: 0;
-}
 .button {
-  margin-left: 20%;
   color: white;
-  margin-top: 15px;
+  background-color: black;
+  min-height: 70px;
 }

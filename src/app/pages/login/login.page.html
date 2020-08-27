@@ -1,43 +1,43 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content>
-  <div class="logo">
-    <img src="../../../assets/logo.png" alt="" />
-  </div>
-
-  <div class="login">LOGIN</div>
-  <div class="form">
-    <ion-item lines="none">
-      <ion-label>EMAIL</ion-label>
-      <ion-input [(ngModel)]="email"></ion-input>
-    </ion-item>
+  <ion-grid>
+    <ion-row>
+      <div style="margin:0 auto;margin-top: 5%;">
+        <img src="../../../assets/logo.png" alt="" />
+      </div>
+    </ion-row>
+    <ion-row>
+      <p class="login-text">LOGIN</p>
+    </ion-row>
+    <ion-row style="margin-top: 10%;">
+      <ion-item lines="none">
+        <ion-label>EMAIL</ion-label>
+        <ion-input style="width: 100%;" [(ngModel)]="email"></ion-input>
+      </ion-item>
+    </ion-row>
     <hr
       style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
     />
-    <ion-item lines="none">
-      <ion-label>PASSWORD</ion-label>
-      <ion-input [(ngModel)]="password" type="password"></ion-input>
-    </ion-item>
+    <ion-row>
+      <ion-item lines="none">
+        <ion-label>PASSWORD</ion-label>
+        <ion-input style="width: 100%;" [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+    </ion-row>
     <hr
       style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%;"
     />
-  </div>
-
-  <div class="low">
-    <div>
-      FORGET PASSWORD?
-    </div>
-    <div (click)="gotoRegister()" style="margin-top: 30px;">
-      NEW USER? SIGN UP
-    </div>
-  </div>
-  <div class="lower">
-    <ion-button fill="clear" class="button" [disabled]="email==''||email==undefined||password==''||password==undefined" (click)="login()"
-      >LOGIN<ion-icon name="arrow-forward-outline"></ion-icon
-    ></ion-button>
-  </div>
+    <ion-row>
+      <p style="margin: 0 auto;margin-top: 10%;">FORGET PASSWORD?</p>
+    </ion-row>
+    <ion-row (click)="gotoRegister()">
+      <p style="margin: 0 auto;margin-top: 3%;">NEW USER? SIGN UP</p>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+<ion-footer>
+  <ion-row  class="button">
+    <ion-button style="margin: 0 auto;" fill="clear" [disabled]="email==''||email==undefined||password==''||password==undefined" (click)="login()"
+    >LOGIN<ion-icon name="arrow-forward-outline"></ion-icon
+  ></ion-button>
+  </ion-row>
+</ion-footer>

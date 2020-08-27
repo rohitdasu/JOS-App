@@ -8,7 +8,7 @@ import { CelebrationPageRoutingModule } from './celebration-routing.module';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import { CelebrationPage } from './celebration.page';
-
+import { BrowserModule } from '@angular/platform-browser';
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +16,8 @@ import { CelebrationPage } from './celebration.page';
     IonicModule,
     CelebrationPageRoutingModule,
     MatDatepickerModule,
-    MatInputModule
+    MatInputModule,
+    BrowserModule
   ],
   declarations: [CelebrationPage]
 })

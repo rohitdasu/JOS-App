@@ -1,19 +1,16 @@
 <ion-content [fullscreen]="true" mode="ios">
   <ion-toolbar>
-    <!-- <ion-button slot="start" mode="md" fill="clear" color="light">
-      <ion-icon name="arrow-back-outline" size="large"></ion-icon>
-    </ion-button> -->
     <ion-button fill="clear" slot="end" color="light">
       <ion-icon size="large" name="menu-outline"> </ion-icon>
     </ion-button>
   </ion-toolbar>
 
   <ion-card mode="ios">
-    <p style="padding-left: 5%; padding-top: 5%;">per people price : 10rs</p>
+    <p style="padding-left: 5%; padding-top: 5%">Per People Price : RS 10</p>
     <ion-card-content>
-      <h2 style="font-weight: bold;">How many people to donate food</h2>
+      <h2 style="font-weight: bold">How many people to donate food</h2>
     </ion-card-content>
-    <ion-card-content style="margin-top: -30px;">
+    <ion-card-content style="margin-top: -30px">
       <ion-item lines="none">
         <ion-label>Select number of persons</ion-label>
         <ion-select value="5">
@@ -36,34 +33,33 @@
   </ion-card>
   <ion-item-divider></ion-item-divider>
   <ion-item>
-    <ion-label style="font-weight: bolder;">Choose Date</ion-label>
+    <ion-label style="font-weight: bolder">Choose Date</ion-label>
     <ion-icon name="calendar-outline"></ion-icon>
-    <ion-datetime displayFormat="MM DD YY" min="2020" max="2022">
+    <ion-datetime mode="md" displayFormat="MM DD YY" min="2020" max="2022">
     </ion-datetime>
   </ion-item>
   <ion-item-divider></ion-item-divider>
   <ion-item>
-    <ion-label style="font-weight: bold;">Food Type</ion-label>
+    <ion-label style="font-weight: bold">Food Type</ion-label>
   </ion-item>
 
-  <ion-row style="padding: 5%;" mode="md">
+  <ion-row style="padding: 5%" mode="md">
     <ion-col>
       <ion-row>
-        <ion-col size="2"><ion-checkbox color="light"></ion-checkbox></ion-col>
+        <ion-col size="2"><ion-checkbox (ionChange)="solid($event)" name="solid" color="light"></ion-checkbox></ion-col>
         <ion-col size="10"><ion-label>Solid</ion-label></ion-col>
       </ion-row>
     </ion-col>
     <ion-col>
       <ion-row>
-        <ion-col size="2"><ion-checkbox color="light"></ion-checkbox></ion-col>
+        <ion-col size="2"><ion-checkbox (ionChange)="liquid($event)"  color="light"></ion-checkbox></ion-col>
         <ion-col size="10"><ion-label>Liquid</ion-label></ion-col>
       </ion-row>
     </ion-col>
   </ion-row>
-
-  <ion-row style="padding-left: 5%; margin-top: -30px;" mode="md">
+  <ion-row style="padding-left: 5%; margin-top: -30px">
     <ion-col>
-      <ion-row mode="ios">
+      <ion-row *ngIf="solidChecked">
         <ion-select value="1">
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
@@ -79,7 +75,7 @@
       </ion-row>
     </ion-col>
     <ion-col>
-      <ion-row mode="ios">
+      <ion-row *ngIf="liquidChecked">
         <ion-select value="1">
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
@@ -97,22 +93,22 @@
   </ion-row>
 
   <ion-item-divider></ion-item-divider>
-  <ion-row style="padding: 5%;">
+  <ion-row style="padding: 5%">
     <ion-col size="1">
       <ion-checkbox color="light" mode="md"></ion-checkbox>
     </ion-col>
     <ion-col size="11">
-      <ion-label style="font-weight: 800;"
+      <ion-label style="font-weight: 800"
         >I don't want to recieve whatsapp image</ion-label
       >
     </ion-col>
   </ion-row>
   <ion-item-divider></ion-item-divider>
-  <div style="padding: 5%; font-weight: 800;">
+  <div style="padding: 5%; font-weight: 800">
     <ion-row>
-      <ion-col>Total People</ion-col>
-      <ion-col>Price per People</ion-col>
-      <ion-col>Your Total Price</ion-col>
+      <ion-col style="font-size: small;">Total People</ion-col>
+      <ion-col style="font-size: small;">Price per People</ion-col>
+      <ion-col style="font-size: small;">Your Total Price</ion-col>
     </ion-row>
     <ion-row size="5">
       <ion-col>
@@ -127,13 +123,8 @@
   </div>
   <div>
     <ion-button
-    (click)="gotoPayment()"
-      style="
-        width: 80%;
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 5%;
-      "
+      (click)="gotoPayment()"
+      style="width: 80%; margin-left: 10%; margin-right: 10%; margin-bottom: 5%"
       color="warning"
       >Donate Now</ion-button
     >

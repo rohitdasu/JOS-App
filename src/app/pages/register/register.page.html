@@ -1,64 +1,75 @@
 <ion-content>
-  <div class="logo">
-    <img src="../../../assets/logo.png" alt="" />
-  </div>
-
-  <div class="form">
-    <div style="font-weight: bold; font-size: large; text-align: center">
-      REGISTER
-    </div>
-    <ion-item lines="none">
-      <ion-label>NAME</ion-label>
-      <ion-input [(ngModel)]="name"></ion-input>
-    </ion-item>
-    <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
-    />
-    <ion-item lines="none">
-      <ion-label>EMAIL</ion-label>
-      <ion-input [(ngModel)]="email"></ion-input>
-    </ion-item>
-    <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
-    />
-    <ion-item lines="none">
-      <ion-label>PHONE</ion-label>
-      <ion-input [(ngModel)]="phone"></ion-input>
-    </ion-item>
-    <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
-    />
-    <ion-item lines="none">
-      <ion-label>PASSWORD</ion-label>
-      <ion-input type="password" [(ngModel)]="password"></ion-input>
-    </ion-item>
-    <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
-    />
-    <ion-item lines="none">
-      <ion-label>CONFIRM PASSWORD</ion-label>
-      <ion-input type="password" [(ngModel)]="confirm_password"></ion-input>
-    </ion-item>
-    <hr
-      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
-    />
-  </div>
-
-  <div class="low">
+  <ion-grid>
     <ion-row>
-      <ion-col size="1"><ion-checkbox mode="md"></ion-checkbox></ion-col>
-      <ion-col size="11">I'am agree with your terms & condition</ion-col>
+      <div style="margin: 0 auto; margin-top: 5%">
+        <img src="../../../assets/logo.png" alt="" />
+      </div>
     </ion-row>
     <ion-row>
-      <ion-col>
-        <span (click)="gotoLogin()">ALREADY HAVE AN ACCOUNT? LOGIN</span>
-      </ion-col>
+      <p class="login-text">REGISTER</p>
     </ion-row>
-  </div>
-
-  <div class="lower">
+    <ion-row style="margin-top: 5%">
+      <ion-item lines="none">
+        <ion-label>NAME</ion-label>
+        <ion-input [(ngModel)]="name"></ion-input>
+      </ion-item>
+    </ion-row>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
+    />
+    <ion-row>
+      <ion-item lines="none">
+        <ion-label>EMAIL</ion-label>
+        <ion-input [(ngModel)]="email"></ion-input>
+      </ion-item>
+    </ion-row>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
+    />
+    <ion-row>
+      <ion-item lines="none">
+        <ion-label>PHONE</ion-label>
+        <ion-input [(ngModel)]="phone"></ion-input>
+      </ion-item>
+    </ion-row>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
+    />
+    <ion-row>
+      <ion-item lines="none">
+        <ion-label>PASSWORD</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-row>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
+    />
+    <ion-row>
+      <ion-item lines="none">
+        <ion-label>CONFIRM PASSWORD</ion-label>
+        <ion-input type="password" [(ngModel)]="confirm_password"></ion-input>
+      </ion-item>
+    </ion-row>
+    <hr
+      style="border: 0.1px solid black; margin-left: 10%; margin-right: 10%"
+    />
+    <ion-row>
+      <div style="margin: 0 auto; margin-top: 5%">
+        <ion-col size="1"><ion-checkbox mode="md"></ion-checkbox></ion-col>
+        <ion-col size="11">I'am agree with your terms & condition</ion-col>
+      </div>
+    </ion-row>
+    <ion-row (click)="gotoLogin()">
+      <span style="margin: 0 auto; margin-top: 3%"
+        >ALREADY HAVE AN ACCOUNT? LOGIN</span
+      >
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-row class="button">
     <ion-button fill="clear" class="button" (click)="register()"
       >SIGN UP<ion-icon name="arrow-forward-outline"></ion-icon
     ></ion-button>
-  </div>
-</ion-content>
+  </ion-row>
+</ion-footer>

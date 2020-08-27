@@ -26,23 +26,25 @@ export class LoginPage implements OnInit {
     this.router.navigate(["/register"]);
   }
   login() {
-    this.api.loginApi(this.email, this.password).subscribe((val) => {
-      if (val["status"] == "success") {
-        let id = val["user"].id;
-        let phone = val["user"].phone;
-        let email = val["user"].email;
-        let name = val["user"].name;
-        this.storage.setUserData(id, name, phone, email);
-        localStorage.setItem("access_token", val["access_token"]);
-        localStorage.setItem("user_name", val["user"].name);
-        this.auth.addAuth(true);
-        this.router.navigate(["/tabs/tab3"]);
-      } else if (val["status"] == "failure") {
-        this.presentToast("Username and Password Incorrect!");
-      } else {
-        this.presentToast("Something Went Wrong!");
+    this.api.loginApi(this.email, this.password).subscribe(
+      (val) => {
+        console.log(val);
+        if (val["status"] == "success") {
+          let id = val["user"].id;
+          let phone = val["user"].phone;
+          let email = val["user"].email;
+          let name = val["user"].name;
+          this.storage.setUserData(id, name, phone, email);
+          localStorage.setItem("access_token", val["access_token"]);
+          localStorage.setItem("user_name", val["user"].name);
+          this.auth.addAuth(true);
+          this.router.navigate(["/tabs/tab3"]);
+        }
+      },
+      (err) => {
+        this.presentToast(err["error"].message);
       }
-    });
+    );
   }
   async presentToast(msg: string) {
     const toast = await this.toastController.create({
