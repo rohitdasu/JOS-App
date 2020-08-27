@@ -8,55 +8,44 @@
     </ion-button>
   </ion-toolbar>
 
-  <div class="header">
-    Choose Your Plan
-  </div>
+  <div class="header">Choose Your Plan</div>
 
-  <div style="margin-top: 10%;">
+  <div style="margin-top: 10%">
     <ion-slides mode="ios" [options]="slideOptions">
       <ion-slide>
         <ion-card class="card">
-          <ion-card-header>
-            6 Month
-          </ion-card-header>
+          <ion-card-header> 6 Month </ion-card-header>
           <ion-card-content>
             <img src="../../../assets/logo.png" alt="" />
           </ion-card-content>
-          <ion-card-header>
-            500 rs
-          </ion-card-header>
+          <ion-card-header> RS 500 </ion-card-header>
         </ion-card>
       </ion-slide>
       <ion-slide>
         <ion-card class="card">
-          <ion-card-header>
-            1 Month
-          </ion-card-header>
+          <ion-card-header> 1 Month </ion-card-header>
           <ion-card-content>
             <img src="../../../assets/logo.png" alt="" />
           </ion-card-content>
-          <ion-card-header>
-            200 rs
-          </ion-card-header>
+          <ion-card-header> RS 200 </ion-card-header>
         </ion-card>
       </ion-slide>
       <ion-slide>
         <ion-card class="card">
-          <ion-card-header>
-            6 Month
-          </ion-card-header>
+          <ion-card-header> 6 Month </ion-card-header>
           <ion-card-content>
             <img src="../../../assets/logo.png" alt="" />
           </ion-card-content>
-          <ion-card-header>
-            200 rs
-          </ion-card-header>
+          <ion-card-header> RS 200 </ion-card-header>
         </ion-card>
       </ion-slide>
     </ion-slides>
   </div>
   <div>
-    <ion-button color="warning" style="width: 80%; margin: 10%;" (click)="gotoPayment()"
+    <ion-button
+      color="warning"
+      style="width: 80%; margin: 10%"
+      (click)="gotoPayment()"
       >Confirm</ion-button
     >
   </div>

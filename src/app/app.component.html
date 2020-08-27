@@ -1,3 +1,22 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="content1" side="start">
+    <ion-header class="x">
+      <img src="../assets/avatar.jpg" class="avatar" alt="">
+    </ion-header>
+    <ion-content class="x">
+      <ion-item class="x">
+        Help
+      </ion-item>
+      <ion-item class="x">
+        Terms of Services
+      </ion-item>
+      <ion-item class="x">
+        Privacy Policy
+      </ion-item>
+      <ion-item class="x">
+        Logout <ion-icon name="log-out-outline"></ion-icon>
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content1" main></ion-router-outlet>
 </ion-app>

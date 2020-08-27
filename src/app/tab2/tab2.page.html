@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<!-- <ion-content [fullscreen]="true">
   <ion-row style="padding: 5%; font-size: x-large;">
     About
   </ion-row>
@@ -50,4 +50,67 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-content> -->
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-header style="font-size: x-large; padding: 5%"> About </ion-header>
+    <ion-buttons slot="end" style="padding: 5%">
+      <ion-menu-button fill="clear" color="dark"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-row>
+    <ion-slides [options]="slideOptions">
+      <ion-slide class="slide">
+        <ion-card
+          class="card ion-activatable"
+          (click)="openDialog('../../assets/tab2/10.jpg')"
+        >
+          <ion-ripple-effect></ion-ripple-effect>
+          <img src="../../assets/tab2/10.jpg" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br />
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide class="slide">
+        <ion-card
+          class="card ion-activatable"
+          (click)="openDialog('../../assets/tab2/2.jpg')"
+        >
+          <ion-ripple-effect></ion-ripple-effect>
+          <img src="../../assets/tab2/2.jpg" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br />
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide class="slide" (click)="openDialog('../../assets/tab2/6.jpg')">
+        <ion-card class="card ion-activatable">
+          <ion-ripple-effect></ion-ripple-effect>
+          <img src="../../assets/tab2/6.jpg" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br />
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-slide>
+      <ion-slide class="slide">
+        <ion-card
+          class="card ion-activatable"
+          (click)="openDialog('../../assets/tab2/9_.jpg')"
+        >
+          <ion-ripple-effect></ion-ripple-effect>
+          <img src="../../assets/tab2/9_.jpg" />
+          <div class="text">
+            <ion-text>Lorem ipsum dolr</ion-text><br />
+            <ion-text>21/08/2020</ion-text>
+          </div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-row>
 </ion-content>

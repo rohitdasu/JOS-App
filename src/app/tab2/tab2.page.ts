@@ -18,6 +18,14 @@ const { App } = Plugins;
   styleUrls: ["tab2.page.scss"],
 })
 export class Tab2Page {
+  slideOptions = {
+    pager: false,
+    slidesPerView: 1,
+    autoplay: true,
+    speed:900,
+    loop: false,
+  };
+
   constructor(
     private router: Router,
     public dialog: MatDialog,
