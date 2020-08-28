@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-menu contentId="content1" side="start">
+  <ion-menu type="push" contentId="content1" side="start">
     <ion-header class="x">
       <img src="../assets/avatar.jpg" class="avatar" alt="">
     </ion-header>
@@ -13,7 +13,7 @@
       <ion-item class="x">
         Privacy Policy
       </ion-item>
-      <ion-item class="x">
+      <ion-item (click)="logout()" class="x">
         Logout <ion-icon name="log-out-outline"></ion-icon>
       </ion-item>
     </ion-content>

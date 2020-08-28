@@ -1,57 +1,3 @@
-<!-- <ion-content [fullscreen]="true">
-  <ion-row style="padding: 5%; font-size: x-large;">
-    About
-  </ion-row>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-card (click)="openDialog('../../assets/tab2/9_.jpg')" class="ion-activatable" mode="ios">
-          <ion-ripple-effect></ion-ripple-effect>
-          <img class="img1" src="../../assets/tab2/9_.jpg" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br />
-            <ion-text>21/08/2020</ion-text>
-          </div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-card (click)="openDialog('../../assets/tab2/2.jpg')" class="ion-activatable">
-          <ion-ripple-effect></ion-ripple-effect>
-          <img class="img2" src="../../assets/tab2/2.jpg" alt="" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br>
-            <ion-text>21/08/2020</ion-text>
-          </div>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card (click)="openDialog('../../assets/tab2/6.jpg')" class="ion-activatable" mode="ios">
-          <ion-ripple-effect></ion-ripple-effect>
-          <img class="img2" src="../../assets/tab2/6.jpg" alt="" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br>
-            <ion-text>21/08/2020</ion-text>
-          </div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-card (click)="openDialog('../../assets/tab2/9_.jpg')" class="ion-activatable" mode="ios">
-          <ion-ripple-effect></ion-ripple-effect>
-          <img class="img1" src="../../assets/tab2/9_.jpg" alt="" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br />
-            <ion-text>21/08/2020</ion-text>
-          </div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content> -->
-
 <ion-content [fullscreen]="true">
   <ion-toolbar>
     <p style="font-size: x-large; padding: 5%">About</p>
@@ -63,55 +9,127 @@
   <ion-row>
     <ion-slides [options]="slideOptions">
       <ion-slide class="slide">
-        <ion-card
-          class="card ion-activatable"
-          (click)="openDialog('../../assets/tab2/10.jpg')"
-          mode="ios"
-        >
+        <ion-card class="card ion-activatable" mode="ios">
+          <div style="position: absolute; right: 0">
+            <ion-button
+              (click)="openDialog('../../assets/tab2/10.jpg')"
+              fill="clear"
+              ><ion-icon
+                name="information-circle-outline"
+                size="large"
+                color="light"
+              ></ion-icon
+            ></ion-button>
+          </div>
           <ion-ripple-effect></ion-ripple-effect>
           <img src="../../assets/tab2/10.jpg" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br />
-            <ion-text>21/08/2020</ion-text>
-          </div>
+          <ion-card-content style="text-align: left">
+            <span
+              >COVID-19 HELP <br />
+              Lorem Ipsum is a good way
+            </span>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button
+              style="width: 100%"
+              (click)="gotoCelebration()"
+              color="warning"
+              >Donate Now</ion-button
+            >
+          </ion-card-content>
         </ion-card>
       </ion-slide>
       <ion-slide class="slide">
-        <ion-card
-          class="card ion-activatable"
-          (click)="openDialog('../../assets/tab2/2.jpg')"
-          mode="ios"
-        >
+        <ion-card class="card ion-activatable" mode="ios">
+          <div style="position: absolute; right: 0">
+            <ion-button
+              (click)="openDialog('../../assets/tab2/2.jpg')"
+              fill="clear"
+              ><ion-icon
+                name="information-circle-outline"
+                size="large"
+                color="light"
+              ></ion-icon
+            ></ion-button>
+          </div>
           <ion-ripple-effect></ion-ripple-effect>
           <img src="../../assets/tab2/2.jpg" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br />
-            <ion-text>21/08/2020</ion-text>
-          </div>
-        </ion-card>
-      </ion-slide>
-      <ion-slide class="slide" (click)="openDialog('../../assets/tab2/6.jpg')">
-        <ion-card class="card ion-activatable" mode="ios">
-          <ion-ripple-effect></ion-ripple-effect>
-          <img src="../../assets/tab2/6.jpg" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br />
-            <ion-text>21/08/2020</ion-text>
-          </div>
+          <ion-card-content style="text-align: left">
+            <span
+              >COVID-19 HELP <br />
+              Lorem Ipsum is a good way
+            </span>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button
+              style="width: 100%"
+              (click)="gotoCelebration()"
+              color="warning"
+              >Donate Now</ion-button
+            >
+          </ion-card-content>
         </ion-card>
       </ion-slide>
       <ion-slide class="slide">
-        <ion-card
-          class="card ion-activatable"
-          (click)="openDialog('../../assets/tab2/9_.jpg')"
-          mode="ios"
-        >
+        <ion-card class="card ion-activatable" mode="ios">
+          <div style="position: absolute; right: 0">
+            <ion-button
+              (click)="openDialog('../../assets/tab2/6.jpg')"
+              fill="clear"
+              ><ion-icon
+                name="information-circle-outline"
+                size="large"
+                color="light"
+              ></ion-icon
+            ></ion-button>
+          </div>
+          <ion-ripple-effect></ion-ripple-effect>
+          <img src="../../assets/tab2/6.jpg" />
+          <ion-card-content style="text-align: left">
+            <span
+              >COVID-19 HELP <br />
+              Lorem Ipsum is a good way
+            </span>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button
+              style="width: 100%"
+              (click)="gotoCelebration()"
+              color="warning"
+              >Donate Now</ion-button
+            >
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+      <ion-slide class="slide">
+        <ion-card class="card ion-activatable" mode="ios">
+          <div style="position: absolute; right: 0">
+            <ion-button
+              (click)="openDialog('../../assets/tab2/9_.jpg')"
+              fill="clear"
+              ><ion-icon
+                name="information-circle-outline"
+                size="large"
+                color="light"
+              ></ion-icon
+            ></ion-button>
+          </div>
           <ion-ripple-effect></ion-ripple-effect>
           <img src="../../assets/tab2/9_.jpg" />
-          <div class="text">
-            <ion-text>Lorem ipsum dolr</ion-text><br />
-            <ion-text>21/08/2020</ion-text>
-          </div>
+          <ion-card-content style="text-align: left">
+            <span
+              >COVID-19 HELP <br />
+              Lorem Ipsum is a good way
+            </span>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-button
+              style="width: 100%"
+              (click)="gotoCelebration()"
+              color="warning"
+              >Donate Now</ion-button
+            >
+          </ion-card-content>
         </ion-card>
       </ion-slide>
     </ion-slides>

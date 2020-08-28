@@ -20,10 +20,10 @@ const { App } = Plugins;
 export class Tab2Page {
   slideOptions = {
     pager: false,
-    slidesPerView: 1,
+    slidesPerView: 1.4,
     autoplay: true,
-    speed:900,
-    loop: false,
+    speed: 900,
+    loop: true,
   };
 
   constructor(
@@ -48,5 +48,8 @@ export class Tab2Page {
       },
     });
     return await modal.present();
+  }
+  gotoCelebration() {
+    this.router.navigate(["/tabs/tab1"]);
   }
 }
