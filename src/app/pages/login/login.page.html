@@ -1,4 +1,9 @@
 <ion-content>
+  <div>
+    <ion-button (click)="gotoHome()" fill="clear" color="dark" style="background-color: #ffc409;">
+      <ion-icon size="large" name="close-sharp"></ion-icon>
+    </ion-button>
+  </div>
   <ion-grid>
     <ion-row>
       <div style="margin:0 auto;margin-top: 5%;">
@@ -32,8 +37,15 @@
     <ion-row (click)="gotoRegister()">
       <p style="margin: 0 auto;margin-top: 3%;">NEW USER? SIGN UP</p>
     </ion-row>
+    <ion-row>
+      <div style="margin:0 auto;" *ngIf="spinner">
+        <ion-spinner></ion-spinner>
+      </div>
+    </ion-row>
   </ion-grid>
 </ion-content>
+
+
 <ion-footer>
   <ion-row  class="button">
     <ion-button style="margin: 0 auto;" fill="clear" [disabled]="email==''||email==undefined||password==''||password==undefined" (click)="login()"
@@ -41,3 +53,5 @@
   ></ion-button>
   </ion-row>
 </ion-footer>
+
+

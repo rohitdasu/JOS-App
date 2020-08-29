@@ -23,4 +23,7 @@ export class RegisterPage implements OnInit {
   register(){
     this.api.registerApi(this.name,this.email,this.phone,this.password,this.confirm_password).subscribe(val=>console.log(val));
   }
+  gotoHome(){
+    this.router.navigate(['/tabs/tab2']);
+  }
 }

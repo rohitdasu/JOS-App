@@ -13,7 +13,7 @@ import { StorageService } from "src/app/shared/storage.service";
 export class LoginPage implements OnInit {
   email: string;
   password: string;
-
+  spinner: boolean;
   constructor(
     private router: Router,
     private api: ApiService,
@@ -26,6 +26,7 @@ export class LoginPage implements OnInit {
     this.router.navigate(["/register"]);
   }
   login() {
+    this.spinner = true;
     this.api.loginApi(this.email, this.password).subscribe(
       (val) => {
         console.log(val);
@@ -38,10 +39,12 @@ export class LoginPage implements OnInit {
           localStorage.setItem("access_token", val["access_token"]);
           localStorage.setItem("user_name", val["user"].name);
           this.auth.addAuth(true);
+          this.spinner = false;
           this.router.navigate(["/tabs/tab3"]);
         }
       },
       (err) => {
+        this.spinner = false;
         this.presentToast(err["error"].message);
       }
     );
@@ -53,5 +56,8 @@ export class LoginPage implements OnInit {
       duration: 2000,
     });
     toast.present();
+  }
+  gotoHome() {
+    this.router.navigate(["/tabs/tab2"]);
   }
 }

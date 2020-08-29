@@ -1,12 +1,12 @@
 <ion-content [fullscreen]="true">
   <div>
-    <img src="../../assets/page1.png" alt="" />
     <ion-back-button
-      style="position: absolute; top: 0; padding: 5%;"
+      style="position: absolute; top: 0; padding: 5%;background-color: transparent;"
       color="light"
       mode="md"
       defaultHref="/"
     ></ion-back-button>
+    <img src="../../assets/page1.png" alt="" />
   </div>
   <div class="ion-activatable">
     <ion-ripple-effect type="unbounded"></ion-ripple-effect>
@@ -25,8 +25,8 @@
       scrambled it to make a type specimen book. It has survived not only five
       cen
     </p>
-    <ion-button (click)="gotoPlan()" color="dark" class="button"
-      >Select Plan</ion-button
+    <ion-chip (click)="gotoPlan()" color="dark" class="button"
+      >Select Plan</ion-chip
     >
   </div>
 </ion-content>

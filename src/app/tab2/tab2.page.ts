@@ -20,7 +20,7 @@ const { App } = Plugins;
 export class Tab2Page {
   slideOptions = {
     pager: false,
-    slidesPerView: 1.4,
+    slidesPerView: 1.2,
     autoplay: true,
     speed: 900,
     loop: true,
@@ -50,6 +50,19 @@ export class Tab2Page {
     return await modal.present();
   }
   gotoCelebration() {
-    this.router.navigate(["/tabs/tab1"]);
+    this.router.navigate(["/donate-now"]);
+  }
+
+  async openDialog1(img: string) {
+    const modal = await this.modalController.create({
+      component: ModalPage,
+      componentProps: {
+        img: img,
+      },
+    });
+    return await modal.present();
+  }
+  gotoCelebration1() {
+    this.router.navigate(["/donate-now"]);
   }
 }

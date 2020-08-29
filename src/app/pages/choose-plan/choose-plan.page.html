@@ -3,9 +3,9 @@
     <ion-buttons>
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-button fill="clear" color="dark" slot="end">
-      <ion-icon size="large" name="menu"></ion-icon>
-    </ion-button>
+    <ion-buttons slot="end" style="padding: 5%">
+      <ion-menu-button fill="clear" color="dark"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 
   <div class="header">Choose Your Plan</div>
@@ -46,6 +46,7 @@
       color="warning"
       style="width: 80%; margin: 10%"
       (click)="gotoPayment()"
+      mode="ios"
       >Confirm</ion-button
     >
   </div>

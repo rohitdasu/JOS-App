@@ -11,5 +11,6 @@ export class AuthService {
   constructor() {}
   addAuth(x: boolean) {
     this.loggedIn.next(x);
+    localStorage.setItem("loggedIn",'true');
   }
 }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { TabsPage } from "./tabs.page";
 import { CelebrationPage } from "../pages/celebration/celebration.page";
 import { AuthGuard } from "../guards/auth.guard";
+import { LoginPage } from '../pages/login/login.page';
 
 const routes: Routes = [
   {
@@ -23,7 +24,7 @@ const routes: Routes = [
         path: "tab3",
         loadChildren: () =>
           import("../tab3/tab3.module").then((m) => m.Tab3PageModule),
-        canActivate: [AuthGuard],
+          canActivate: [AuthGuard],
       },
       {
         path: "",
