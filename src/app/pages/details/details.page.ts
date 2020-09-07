@@ -8,9 +8,11 @@ import { Router } from "@angular/router";
 })
 export class DetailsPage implements OnInit {
   constructor(private router: Router) {}
-
   ngOnInit() {}
   gotoPlan() {
     this.router.navigate(["/choose-plan"]);
+  }
+  gotoDonate() {
+    this.router.navigate(["/donate-now"]);
   }
 }

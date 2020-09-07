@@ -1,10 +1,13 @@
 <ion-content [fullscreen]="true">
-  <ion-toolbar>
-    <p style="font-size: x-large; padding: 5%">About</p>
-    <ion-buttons slot="end" style="padding: 5%">
-      <ion-menu-button fill="clear" color="dark"></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title slot="start">About</ion-title>
+      <!-- <p style="font-size: x-large; padding: 5%">About</p> -->
+      <ion-buttons slot="end">
+        <ion-menu-button fill="clear" color="dark"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
   <ion-row>
     <ion-slides [options]="slideOptions">
       <ion-slide class="slide">
@@ -23,10 +26,7 @@
           <ion-ripple-effect></ion-ripple-effect>
           <img src="../../assets/tab2/10.jpg" />
           <ion-card-content style="text-align: left">
-            <span
-              >COVID-19 HELP <br />
-              Lorem Ipsum is a good way
-            </span>
+            <span>COVID-19 HELP </span>
             <ion-button
               style="width: 100%"
               (click)="gotoCelebration1()"
@@ -52,10 +52,7 @@
           <ion-ripple-effect></ion-ripple-effect>
           <img src="../../assets/tab2/2.jpg" />
           <ion-card-content style="text-align: left">
-            <span
-              >COVID-19 HELP <br />
-              Lorem Ipsum is a good way
-            </span>
+            <span>COVID-19 HELP </span>
             <ion-button
               style="width: 100%"
               (click)="gotoCelebration()"
@@ -81,10 +78,7 @@
           <ion-ripple-effect></ion-ripple-effect>
           <img src="../../assets/tab2/6.jpg" />
           <ion-card-content style="text-align: left">
-            <span
-              >COVID-19 HELP <br />
-              Lorem Ipsum is a good way
-            </span>
+            <span>COVID-19 HELP </span>
             <ion-button
               style="width: 100%"
               (click)="gotoCelebration()"
@@ -110,10 +104,7 @@
           <ion-ripple-effect></ion-ripple-effect>
           <img src="../../assets/tab2/9_.jpg" />
           <ion-card-content style="text-align: left">
-            <span
-              >COVID-19 HELP <br />
-              Lorem Ipsum is a good way
-            </span>
+            <span>COVID-19 HELP </span>
             <ion-button
               style="width: 100%"
               (click)="gotoCelebration()"
