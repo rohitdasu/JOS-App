@@ -12,6 +12,6 @@ export class Tab3Page implements OnInit {
   user: User;
   constructor(private storage: StorageService) {}
   ngOnInit() {
-    this.user = this.storage.getUserData();
+    this.user = this.storage.getUserData1();
   }
 }

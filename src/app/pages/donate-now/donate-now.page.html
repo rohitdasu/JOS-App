@@ -16,6 +16,7 @@
           <ion-label style="font-weight: bolder">Select Start Date</ion-label>
           <ion-icon name="calendar-outline"></ion-icon>
           <ion-datetime
+            (ionChange)="showDate($event)"
             mode="md"
             displayFormat="MM DD YY"
             min="2020"
@@ -136,8 +137,14 @@
     </ion-row>
 
     <ion-row>
-      <ion-button mode="ios" color="warning" style="width: 90%;margin:0 auto;" (click)="gotoPayment()">CONFIRM</ion-button>
+      <ion-button
+        [disabled]="(date==undefined||date=='') || (solidChecked!=true && liquidChecked!=true)"
+        mode="ios"
+        color="warning"
+        style="width: 90%; margin: 0 auto"
+        (click)="gotoPayment()"
+        >CONFIRM</ion-button
+      >
     </ion-row>
-
   </ion-grid>
 </ion-content>

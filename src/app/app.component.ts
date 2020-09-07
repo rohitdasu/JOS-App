@@ -35,6 +35,7 @@ export class AppComponent {
     localStorage.removeItem("access_token");
     localStorage.removeItem("user_name");
     localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userinfo");
     this.router.navigate(["/tabs/tab2"]);
   }
 }

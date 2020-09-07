@@ -6,13 +6,13 @@ import { ToastController } from "@ionic/angular";
 import { StorageService } from "src/app/shared/storage.service";
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.page.html",
-  styleUrls: ["./login.page.scss"],
+  selector: "app-otp-verify",
+  templateUrl: "./otp-verify.page.html",
+  styleUrls: ["./otp-verify.page.scss"],
 })
-export class LoginPage implements OnInit {
+export class OtpVerifyPage implements OnInit {
   email: string;
-  password: string;
+  otp: string;
   spinner: boolean;
   constructor(
     private router: Router,
@@ -22,26 +22,19 @@ export class LoginPage implements OnInit {
     private storage: StorageService
   ) {}
   ngOnInit() {}
-  gotoRegister() {
-    this.router.navigate(["/register"]);
-  }
-  login() {
+  verify() {
     this.spinner = true;
-    this.api.loginApi(this.email, this.password).subscribe(
+    this.api.verifyOtpApi(this.email, this.otp).subscribe(
       (val) => {
         console.log(val);
-        if (val["status"] == "success") {
-          let id = val["user"].id;
-          let phone = val["user"].phone;
-          let email = val["user"].email;
-          let name = val["user"].name;
-          localStorage.setItem("userinfo", JSON.stringify(val["user"]));
-          this.storage.setUserData(id, name, phone, email);
-          localStorage.setItem("access_token", val["access_token"]);
-          localStorage.setItem("user_name", val["user"].name);
-          this.auth.addAuth(true);
+        if (val["status"] === "failure") {
           this.spinner = false;
-          this.router.navigate(["/tabs/tab3"]);
+          this.presentToast("Something went wrong!");
+        } else {
+          this.spinner = false;
+          localStorage.setItem('userinfo',JSON.stringify(val["responseData"]));
+          this.auth.addAuth(true);
+          this.router.navigate(["/tabs/tab2"]);
         }
       },
       (err) => {
@@ -60,8 +53,5 @@ export class LoginPage implements OnInit {
   }
   gotoHome() {
     this.router.navigate(["/tabs/tab2"]);
-  }
-  gotoFp() {
-    this.router.navigate(["/forget-password"]);
   }
 }

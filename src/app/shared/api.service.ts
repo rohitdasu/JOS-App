@@ -7,6 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class ApiService {
   private apiUrl: string = "https://jos.icodexa.com";
   constructor(private http: HttpClient) {}
+
   public loginApi(email: string, password: string) {
     return this.http.post(this.apiUrl + "/api/login", {
       email: email,
@@ -20,6 +21,13 @@ export class ApiService {
       password: password,
       password_confirmation: confirm_password,
       phone: phone,
+    });
+  }
+
+  public verifyOtpApi(email, otp) {
+    return this.http.post(this.apiUrl + "/api/otpverify", {
+      email: email,
+      otp: otp,
     });
   }
 }

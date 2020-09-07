@@ -46,6 +46,14 @@ const routes: Routes = [
     path: 'donate-now',
     loadChildren: () => import('./pages/donate-now/donate-now.module').then( m => m.DonateNowPageModule)
   },
+  {
+    path: 'otp-verify',
+    loadChildren: () => import('./pages/otp-verify/otp-verify.module').then( m => m.OtpVerifyPageModule)
+  },
+  {
+    path: 'forget-password',
+    loadChildren: () => import('./pages/forget-password/forget-password.module').then( m => m.ForgetPasswordPageModule)
+  },
 ];
 @NgModule({
   imports: [

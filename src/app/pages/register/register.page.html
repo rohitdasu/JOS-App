@@ -1,6 +1,11 @@
 <ion-content>
   <div>
-    <ion-button (click)="gotoHome()" fill="clear" color="dark" style="background-color: #ffc409;">
+    <ion-button
+      (click)="gotoHome()"
+      fill="clear"
+      color="dark"
+      style="background-color: #ffc409"
+    >
       <ion-icon size="large" name="close-sharp"></ion-icon>
     </ion-button>
   </div>
@@ -60,7 +65,9 @@
     />
     <ion-row>
       <div style="margin: 0 auto; margin-top: 5%">
-        <ion-col size="1"><ion-checkbox mode="md"></ion-checkbox></ion-col>
+        <ion-col size="1"
+          ><ion-checkbox [(ngModel)]="tnm" mode="md"></ion-checkbox
+        ></ion-col>
         <ion-col size="11">I'am agree with your terms & condition</ion-col>
       </div>
     </ion-row>
@@ -69,11 +76,18 @@
         >ALREADY HAVE AN ACCOUNT? LOGIN</span
       >
     </ion-row>
+    <div style="text-align: center;" *ngIf="spinner">
+      <ion-spinner></ion-spinner>
+    </div>
   </ion-grid>
 </ion-content>
 <ion-footer>
   <ion-row class="button">
-    <ion-button fill="clear" class="button" (click)="register()"
+    <ion-button
+      fill="clear"
+      class="button"
+      (click)="register()"
+      [disabled]="confirm_password==undefined||password==undefined||phone==undefined||email==undefined||name==undefined||confirm_password==''||password==''||phone==''||email==''||name==''||tnm==false||tnm==undefined"
       >SIGN UP<ion-icon name="arrow-forward-outline"></ion-icon
     ></ion-button>
   </ion-row>

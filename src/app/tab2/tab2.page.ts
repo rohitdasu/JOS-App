@@ -9,8 +9,6 @@ import { ModalController } from "@ionic/angular";
 import { ModalPage } from "../pages/modal/modal.page";
 
 import { IonRouterOutlet, Platform } from "@ionic/angular";
-import { Plugins } from "@capacitor/core";
-const { App } = Plugins;
 
 @Component({
   selector: "app-tab2",
@@ -20,7 +18,7 @@ const { App } = Plugins;
 export class Tab2Page {
   slideOptions = {
     pager: false,
-    slidesPerView: 1.2,
+    slidesPerView: 1.1,
     autoplay: true,
     speed: 900,
     loop: true,
@@ -32,13 +30,7 @@ export class Tab2Page {
     public modalController: ModalController,
     private routerOutlet: IonRouterOutlet,
     private platform: Platform
-  ) {
-    // this.platform.backButton.subscribeWithPriority(-1, () => {
-    //   if (!this.routerOutlet.canGoBack()) {
-    //     App.exitApp();
-    //   }
-    // });
-  }
+  ) {}
 
   async openDialog(img: string) {
     const modal = await this.modalController.create({
