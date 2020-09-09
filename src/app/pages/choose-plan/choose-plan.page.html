@@ -13,30 +13,62 @@
   <div style="margin-top: 10%">
     <ion-slides mode="ios" [options]="slideOptions">
       <ion-slide>
-        <ion-card class="card">
-          <ion-card-header> 6 Month </ion-card-header>
+        <ion-card
+          class="card"
+          [ngClass]="{'selected':plan1}"
+          (click)="select('1')"
+        >
+          <ion-card-header> <span class="white">6 Month</span></ion-card-header>
           <ion-card-content>
             <img src="../../../assets/logo.png" alt="" />
           </ion-card-content>
-          <ion-card-header> RS 500 </ion-card-header>
+          <ion-card-header> <span class="white">RS 500</span></ion-card-header>
         </ion-card>
       </ion-slide>
       <ion-slide>
-        <ion-card class="card">
-          <ion-card-header> 1 Month </ion-card-header>
+        <ion-card
+          class="card"
+          class="card"
+          [ngClass]="{'selected':plan2}"
+          (click)="select('2')"
+        >
+          <ion-card-header> <span class="white">1 Month</span></ion-card-header>
           <ion-card-content>
             <img src="../../../assets/logo.png" alt="" />
           </ion-card-content>
-          <ion-card-header> RS 200 </ion-card-header>
+          <ion-card-header> <span class="white">RS 200</span></ion-card-header>
         </ion-card>
       </ion-slide>
       <ion-slide>
-        <ion-card class="card">
-          <ion-card-header> 6 Month </ion-card-header>
+        <ion-card
+          class="card"
+          class="card"
+          [ngClass]="{'selected':plan3}"
+          (click)="select('3')"
+        >
+          <ion-card-header>
+            <span class="white">15 Days</span>
+          </ion-card-header>
           <ion-card-content>
             <img src="../../../assets/logo.png" alt="" />
           </ion-card-content>
-          <ion-card-header> RS 200 </ion-card-header>
+          <ion-card-header>
+            <span class="white">RS 100</span>
+          </ion-card-header>
+        </ion-card>
+      </ion-slide>
+      <ion-slide>
+        <ion-card
+          class="card"
+          class="card"
+          [ngClass]="{'selected':plan4}"
+          (click)="select('4')"
+        >
+          <ion-card-header> <span class="white">7 Days</span></ion-card-header>
+          <ion-card-content>
+            <img src="../../../assets/logo.png" alt="" />
+          </ion-card-content>
+          <ion-card-header> <span class="white">RS 50</span></ion-card-header>
         </ion-card>
       </ion-slide>
     </ion-slides>
@@ -47,6 +79,7 @@
       style="width: 80%; margin: 10%"
       (click)="gotoPayment()"
       mode="ios"
+      [disabled]="plan1!=true&&plan2!=true&&plan3!=true&&plan4!=true"
       >Confirm</ion-button
     >
   </div>

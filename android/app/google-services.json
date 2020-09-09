@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "777787582606",
+    "firebase_url": "https://pushnotificationjos.firebaseio.com",
+    "project_id": "pushnotificationjos",
+    "storage_bucket": "pushnotificationjos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777787582606:android:180b433a864c340571c1df",
+        "android_client_info": {
+          "package_name": "app.jos.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777787582606-ql1pi90lahbutae0237chu0n8ervsmdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7PrTQU7_m9lgn0vpnPUNmjY3qHCI2PF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777787582606-ql1pi90lahbutae0237chu0n8ervsmdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,9 +1,18 @@
-.header{
-    padding:5%;
-    font-size: x-large;
+.header {
+  padding: 5%;
+  font-size: x-large;
 }
-.card{
-    height: 250px;
-    width:450px;
-    background-color: #ffc409;
+.card {
+  height: 250px;
+  width: 450px;
+  background-color: #ffc409;
+}
+
+.white {
+  color: white;
+}
+
+.selected {
+  background-color: #b9982c;
+  color: white;
 }

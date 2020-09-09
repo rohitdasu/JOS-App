@@ -1,4 +1,4 @@
-import { Component, Inject } from "@angular/core";
+import { Component, Inject, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import {
   MatDialog,
@@ -9,13 +9,14 @@ import { ModalController } from "@ionic/angular";
 import { ModalPage } from "../pages/modal/modal.page";
 
 import { IonRouterOutlet, Platform } from "@ionic/angular";
+import { PushService } from '../shared/push.service';
 
 @Component({
   selector: "app-tab2",
   templateUrl: "tab2.page.html",
   styleUrls: ["tab2.page.scss"],
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit{
   slideOptions = {
     pager: false,
     slidesPerView: 1.1,
@@ -29,8 +30,13 @@ export class Tab2Page {
     public dialog: MatDialog,
     public modalController: ModalController,
     private routerOutlet: IonRouterOutlet,
-    private platform: Platform
+    private platform: Platform,
+    private push:PushService
   ) {}
+
+  ngOnInit(){
+    this.push.initPush();
+  }
 
   async openDialog(img: string) {
     const modal = await this.modalController.create({
