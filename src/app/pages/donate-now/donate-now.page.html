@@ -37,7 +37,7 @@
         <ion-card-content style="margin-top: -30px">
           <ion-item lines="none">
             <ion-label>Select number of persons</ion-label>
-            <ion-select value="1">
+            <ion-select (ionChange)="getPrice($event)" value="1">
               <ion-select-option value="1">1</ion-select-option>
               <ion-select-option value="2">2</ion-select-option>
               <ion-select-option value="3">3</ion-select-option>

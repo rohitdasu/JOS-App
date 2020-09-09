@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 import { SlideGuard } from "./guards/slide.guard";
+import { AuthGuard } from "./guards/auth.guard";
 
 const routes: Routes = [
   {
@@ -15,44 +16,67 @@ const routes: Routes = [
     canActivate: [SlideGuard],
   },
   {
-    path: 'celebration',
-    loadChildren: () => import('./pages/celebration/celebration.module').then( m => m.CelebrationPageModule)
+    path: "celebration",
+    loadChildren: () =>
+      import("./pages/celebration/celebration.module").then(
+        (m) => m.CelebrationPageModule
+      ),
   },
   {
-    path: 'details',
-    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+    path: "details",
+    loadChildren: () =>
+      import("./pages/details/details.module").then((m) => m.DetailsPageModule),
   },
   {
-    path: 'modal',
-    loadChildren: () => import('./pages/modal/modal.module').then( m => m.ModalPageModule)
+    path: "modal",
+    loadChildren: () =>
+      import("./pages/modal/modal.module").then((m) => m.ModalPageModule),
   },
   {
-    path: 'choose-plan',
-    loadChildren: () => import('./pages/choose-plan/choose-plan.module').then( m => m.ChoosePlanPageModule)
+    path: "choose-plan",
+    loadChildren: () =>
+      import("./pages/choose-plan/choose-plan.module").then(
+        (m) => m.ChoosePlanPageModule
+      ),
   },
   {
-    path: 'payment',
-    loadChildren: () => import('./pages/payment/payment.module').then( m => m.PaymentPageModule)
+    path: "payment",
+    loadChildren: () =>
+      import("./pages/payment/payment.module").then((m) => m.PaymentPageModule),
+    canActivate: [AuthGuard],
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    path: "login",
+    loadChildren: () =>
+      import("./pages/login/login.module").then((m) => m.LoginPageModule),
   },
   {
-    path: 'register',
-    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+    path: "register",
+    loadChildren: () =>
+      import("./pages/register/register.module").then(
+        (m) => m.RegisterPageModule
+      ),
   },
   {
-    path: 'donate-now',
-    loadChildren: () => import('./pages/donate-now/donate-now.module').then( m => m.DonateNowPageModule)
+    path: "donate-now",
+    loadChildren: () =>
+      import("./pages/donate-now/donate-now.module").then(
+        (m) => m.DonateNowPageModule
+      ),
   },
   {
-    path: 'otp-verify',
-    loadChildren: () => import('./pages/otp-verify/otp-verify.module').then( m => m.OtpVerifyPageModule)
+    path: "otp-verify",
+    loadChildren: () =>
+      import("./pages/otp-verify/otp-verify.module").then(
+        (m) => m.OtpVerifyPageModule
+      ),
   },
   {
-    path: 'forget-password',
-    loadChildren: () => import('./pages/forget-password/forget-password.module').then( m => m.ForgetPasswordPageModule)
+    path: "forget-password",
+    loadChildren: () =>
+      import("./pages/forget-password/forget-password.module").then(
+        (m) => m.ForgetPasswordPageModule
+      ),
   },
 ];
 @NgModule({

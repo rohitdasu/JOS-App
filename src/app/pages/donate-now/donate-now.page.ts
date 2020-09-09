@@ -12,18 +12,22 @@ export class DonateNowPage implements OnInit {
   date: any;
   personNum = 1;
   persons: any;
-
+  price:number=1;
   constructor(private router: Router) {}
 
   ngOnInit() {}
   solid(event: any) {
     this.solidChecked = event["detail"].checked;
   }
+  getPrice(event){
+    this.price=event["detail"].value;
+    this.price = this.price*10;
+  }
   liquid(event: any) {
     this.liquidChecked = event["detail"].checked;
   }
   gotoPayment() {
-    this.router.navigate(["/payment"]);
+    this.router.navigate(["/payment",{price:this.price}]);
   }
   showDate(event: Event) {
     this.date = event["detail"].value;

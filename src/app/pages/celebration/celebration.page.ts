@@ -28,7 +28,7 @@ export class CelebrationPage implements OnInit {
     this.date = event["detail"].value;
   }
   gotoPayment() {
-    this.router.navigate(["/payment"]);
+    this.router.navigate(["/payment",{price:this.result}]);
   }
   solid(event: any) {
     this.solidChecked = event["detail"].checked;
