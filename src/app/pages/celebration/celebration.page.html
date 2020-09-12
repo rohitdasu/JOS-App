@@ -6,7 +6,9 @@
   </ion-toolbar>
 
   <ion-card mode="ios">
-    <p style="padding-left: 5%; padding-top: 5%">Per People Price : RS 10</p>
+    <p style="padding-left: 5%; padding-top: 5%">
+      Per People Price : {{celebrationPrice | currency :'INR'}}
+    </p>
     <ion-card-content>
       <h2 style="font-weight: bold">How many persons to donate food</h2>
     </ion-card-content>
@@ -116,7 +118,7 @@
       </ion-row>
     </ion-col>
     <ion-col>
-        <ion-row *ngIf="liquidChecked">
+      <ion-row *ngIf="liquidChecked">
         <ion-select (ionChange)="liquidVal($event)" value="1">
           <ion-select-option value="1">1</ion-select-option>
           <ion-select-option value="2">2</ion-select-option>
@@ -158,7 +160,7 @@
           <ion-col>X</ion-col>
         </ion-row>
       </ion-col>
-      <ion-col size="5">10</ion-col>
+      <ion-col size="5">{{celebrationPrice}}</ion-col>
       <ion-col size="2">{{result}}</ion-col>
     </ion-row>
   </div>

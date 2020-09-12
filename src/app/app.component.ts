@@ -6,6 +6,8 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { AuthService } from "./shared/auth.service";
 import { Router } from "@angular/router";
 import { PushService } from "./shared/push.service";
+import { ApiService } from './shared/api.service';
+import { StorageService } from './shared/storage.service';
 
 @Component({
   selector: "app-root",
@@ -21,7 +23,8 @@ export class AppComponent {
     private auth: AuthService,
     private router: Router,
     public menuCtrl: MenuController,
-    private push: PushService
+    private push: PushService,
+    private storage:StorageService
   ) {
     this.initializeApp();
   }
@@ -31,6 +34,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.storage.setCelebrationPrice();
     });
 
   }

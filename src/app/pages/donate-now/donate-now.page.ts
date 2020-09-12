@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
+import { StorageService } from "src/app/shared/storage.service";
 
 @Component({
   selector: "app-donate-now",
@@ -12,22 +13,24 @@ export class DonateNowPage implements OnInit {
   date: any;
   personNum = 1;
   persons: any;
-  price:number=10;
-  constructor(private router: Router) {}
+  price: number;
+  constructor(private router: Router, private storage: StorageService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.price = this.storage.getCelebrationPrice();
+  }
   solid(event: any) {
     this.solidChecked = event["detail"].checked;
   }
-  getPrice(event){
-    this.price=event["detail"].value;
-    this.price = this.price*10;
+  getPrice(event) {
+    this.price = event["detail"].value;
+    this.price = this.price * 10;
   }
   liquid(event: any) {
     this.liquidChecked = event["detail"].checked;
   }
   gotoPayment() {
-    this.router.navigate(["/payment",{price:this.price}]);
+    this.router.navigate(["/payment", { price: this.price }]);
   }
   showDate(event: Event) {
     this.date = event["detail"].value;

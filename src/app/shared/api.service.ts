@@ -14,6 +14,11 @@ export class ApiService {
       password: password,
     });
   }
+
+  public celebrationPrice() {
+    return this.http.get(this.apiUrl + "/api/celebration-price");
+  }
+
   public registerApi(name, email, phone, password, confirm_password) {
     return this.http.post(this.apiUrl + "/api/signup", {
       name: name,
