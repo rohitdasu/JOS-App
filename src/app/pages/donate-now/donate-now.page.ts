@@ -12,7 +12,7 @@ export class DonateNowPage implements OnInit {
   date: any;
   personNum = 1;
   persons: any;
-  price:number=1;
+  price:number=10;
   constructor(private router: Router) {}
 
   ngOnInit() {}

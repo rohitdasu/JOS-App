@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: "app-payment",
@@ -11,12 +12,12 @@ export class PaymentPage implements OnInit {
   paymentPrice;
   private sub: any;
   userinfo;
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute,private toastCtrl:ToastController) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe((params) => {
       this.price = params.price;
-      this.paymentPrice=this.price*100;
+      this.paymentPrice = this.price * 100;
     });
     this.userinfo = JSON.parse(localStorage.getItem("userinfo"));
   }
@@ -32,8 +33,10 @@ export class PaymentPage implements OnInit {
         card: false,
         upi: true,
         wallet: false,
-        paylater: false,
       },
+      "handler": function (response){
+        this.presentToast(JSON.stringify(response));
+    },
       prefill: {
         name: this.userinfo.name,
         email: this.userinfo.email,
@@ -45,5 +48,13 @@ export class PaymentPage implements OnInit {
     };
     var rzp1 = new Razorpay(options);
     rzp1.open();
+  }
+  async presentToast(msg: string) {
+    const toast = await this.toastCtrl.create({
+      message: msg,
+      position: "middle",
+      duration: 4000,
+    });
+    toast.present();
   }
 }
