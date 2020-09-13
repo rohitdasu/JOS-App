@@ -15,31 +15,35 @@
 
   <div style="margin-top: 30%; padding: 5%">
     <ion-input
+      placeholder="name"
+      [disabled]="x"
+      [(ngModel)]="name"
+    ></ion-input>
+    <hr style="border: 0.1px solid orange" />
+    <ion-input
       placeholder="email"
       [disabled]="x"
-      value="{{user.email}}"
+      [(ngModel)]="email"
     ></ion-input>
     <hr style="border: 0.1px solid orange" />
     <ion-input
       placeholder="phone"
       [disabled]="x"
-      value="{{user.phone}}"
+      [(ngModel)]="phone"
     ></ion-input>
     <hr style="border: 0.1px solid orange" />
-    <ion-input
-      placeholder="Address"
-      [disabled]="x"
-      value="Bhubaneswar"
-    ></ion-input>
-    <hr style="border: 0.1px solid orange" />
-    <ion-input
+    
+    <!-- <ion-input
       type="password"
       [disabled]="x"
       value="xyzxyz"
       placeholder="Password"
     ></ion-input>
-    <hr style="border: 0.1px solid orange" />
+    <hr style="border: 0.1px solid orange" /> -->
     <br />
+    <ion-button *ngIf="!x" color="warning" (click)="profileUpdate()">Update Data</ion-button> &nbsp;
+    <ion-button *ngIf="!x" color="warning" (click)="gotoChangePassword()">Change Password</ion-button>
+    <br><br>
 
     <ion-button color="dark" class="button">My Subscription Plan</ion-button>
 

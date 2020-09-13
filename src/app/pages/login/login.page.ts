@@ -38,6 +38,7 @@ export class LoginPage implements OnInit {
           localStorage.setItem("userinfo", JSON.stringify(val["user"]));
           // this.storage.setUserData(id, name, phone, email);
           localStorage.setItem("access_token", val["access_token"]);
+          console.log(val["access_token"]);
           localStorage.setItem("user_name", val["user"].name);
           this.auth.addAuth(true);
           this.spinner = false;
