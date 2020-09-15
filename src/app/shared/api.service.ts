@@ -49,17 +49,21 @@ export class ApiService {
     let x = {
       email: email,
     };
-    return this.http.post(this.apiUrl+'/api/forgot/password', x);
+    return this.http.post(this.apiUrl + "/api/forgot/password", x);
   }
 
-  public resetPassword(id,password,confirm_password,otp) {
+  public resetPassword(id, password, confirm_password, otp) {
     let x = {
-      user_id:id,
-      password:password,
-      password_confirmation:confirm_password,
-      otp:otp
+      user_id: id,
+      password: password,
+      password_confirmation: confirm_password,
+      otp: otp,
     };
-    return this.http.post(this.apiUrl+'/api/reset/password', x);
+    return this.http.post(this.apiUrl + "/api/reset/password", x);
+  }
+
+  public getPlans() {
+    return this.http.get(this.apiUrl + "/api/plans");
   }
 
   public registerApi(name, email, phone, password, confirm_password) {
